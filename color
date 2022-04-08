@@ -1,0 +1,17 @@
+ <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
+  <p style="color: #ffffff; background-color: #000000">Text color: white, background-color: black</p>
+  <p style="color: #ff0000; background-color: #ffffff">Text color: red, background-color: white</p>
+  <p style="color: blue; background-color: #ffffff">Text color: blue, background-color: white</p>
+  <p style="color: green; background-color: #ffff42">Text color: green, background-color: yellow</p>
+  <p style="color: #ffffff; background-color: #ff0000">Text color: white, background-color: red</p>
+  
+  <div style="color:blue; border: 1px dashed currentColor;">
+  The color of this text is blue.
+  <div style="background:currentColor; height:9px;"></div>
+  This block is surrounded by a blue border.
+</div>
+
+
+ref: https://www.w3.org/WAI/UA/TS/html401/cp0403/0403-FONT-COLOR.html
+ref: https://reactnative.dev/docs/colors
+ref: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
