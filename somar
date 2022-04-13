@@ -1,0 +1,68 @@
+import * as React from 'react';
+import { Text, TextInput, View, StyleSheet, Button  } from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+
+
+
+export default function App() {
+
+  const [Nua, setNua] = React.useState(null);
+const [Nub, setNub] = React.useState(null);
+const [Resultado, setResultado] = React.useState(null);
+
+  Somar=()=>{
+ setResultado(parseInt(Nua)+parseInt(Nub)) 
+
+}
+
+
+  return (
+    <View style={styles.container}>
+      <Text>      Entre com numero A    </Text>
+      
+ 
+      <TextInput 
+      onChangeText={setNua} 
+      placeholder="ex:  "
+       keyboardType="numeric" 
+       value = {Nua}
+       >
+       </TextInput>
+      <Text>      Entre com o numero B    </Text>
+      <TextInput onChangeText={setNub}
+       placeholder="ex: 75" 
+       keyboardType="numeric"
+       value = {Nub}
+        ></TextInput>
+      
+      <Button onPress={()=>Somar()} title="Calcular"> </Button>
+       <TextInput
+       value = {Resultado}
+       >
+       </TextInput>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    
+        justifyContent: 'center',
+    
+    backgroundColor: '#ecf0f1',
+     
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
